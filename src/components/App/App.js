@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import fetchData from '../../APIcalls';
 import Trick from '../Trick/Trick';
+import TrickDisplay from '../TrickDisplay/TrickDisplay';
 
 const App = () => {
 
