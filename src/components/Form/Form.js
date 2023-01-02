@@ -10,21 +10,21 @@ const [link, setLink] = useState('');
 
   return (
     <form>
-      <select name="stance-choice">
-        <option value={stance}>Choose your Stance</option>
-        <option value={stance}>Regular</option>
-        <option value={stance}>Switch</option>
+      <select value={stance} name="stance-choice" onChange={event => setStance(event.target.value)}>
+        <option value=''>Choose your Stance</option>
+        <option value='Regular'>Regular</option>
+        <option value='Switch'>Switch</option>
       </select>
-      <input type="text" placeholder="Name of Trick" value={trickName}/>
-      <select name="obstacle-choice">
-        <option value={obstacle}>Choose your Obstacle</option>
-        <option value={obstacle}>Flatground</option>
-        <option value={obstacle}>Ledge</option>
-        <option value={obstacle}>Rail</option>
-        <option value={obstacle}>Stairs</option>
-        <option value={obstacle}>Pool</option>
+      <input type="text" placeholder="Name of Trick" value={trickName} onChange={event => setTrickName(event.target.value)}/>
+      <select value={obstacle} name="obstacle-choice" onChange={event => setObstacle(event.target.value)}>
+        <option value=''>Choose your Obstacle</option>
+        <option value='Flatground'>Flatground</option>
+        <option value='Ledge'>Ledge</option>
+        <option value='Rail'>Rail</option>
+        <option value='Stairs'>Stairs</option>
+        <option value='Pool'>Pool</option>
       </select>
-      <input type="text" placeholder="Link" value={link}/>
+      <input type="text" placeholder="Link" value={link} onChange={event => setLink(event.target.value)}/>
       <button>SEND IT</button>
     </form>
   )
