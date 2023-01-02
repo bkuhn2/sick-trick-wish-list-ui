@@ -23,6 +23,7 @@ const App = () => {
   return (
     <div className="App">
       <h1>Sick Trick Wish List</h1>
+      < TrickDisplay tricks={tricks} />
     </div>
   );
 }
