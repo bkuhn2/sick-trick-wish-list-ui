@@ -12,3 +12,5 @@ const Trick = ({stance, name, obstacle, tutorial, id}) => {
     </div>
   )
 }
+
+export default Trick;
