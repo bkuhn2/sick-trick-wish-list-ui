@@ -13,4 +13,6 @@ const Trick = ({stance, name, obstacle, tutorial}) => {
   )
 }
 
+//NOTE: clean up data so words are capitalized
+
 export default Trick;
