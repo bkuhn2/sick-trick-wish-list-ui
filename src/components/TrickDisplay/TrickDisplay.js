@@ -12,6 +12,7 @@ const TrickDisplay = ({tricks}) => {
       obstacle={trick.obstacle}
       tutorial={trick.tutorial}
       key={trick.id}
+      id={trick.id}
     />
   })
 
