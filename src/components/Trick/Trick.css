@@ -1,3 +1,9 @@
 .trick {
   display: flex;
+  flex-direction: column;
+  border-style: solid;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.429);
+  width: 20vw;
+  padding: 3%;
 }
