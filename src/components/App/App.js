@@ -12,7 +12,6 @@ const App = () => {
   const getTricks = () => {
     fetchData('http://localhost:3001/api/v1/tricks')
       .then(data => {
-        // console.log('data: ', data);
         setTricks(data);
       })
   }
@@ -21,10 +20,14 @@ const App = () => {
     getTricks();
   }, [])
 
+  const addTrick = (newTrick) => {
+    setTricks([...tricks, newTrick])
+  }
+
   return (
     <div className="App">
       <h1>Sick Trick Wish List</h1>
-      <Form />
+      <Form addTrick={addTrick}/>
       <TrickDisplay tricks={tricks} />
     </div>
   );
