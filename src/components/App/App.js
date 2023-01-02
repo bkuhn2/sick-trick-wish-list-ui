@@ -3,6 +3,7 @@ import './App.css';
 import fetchData from '../../APIcalls';
 import Trick from '../Trick/Trick';
 import TrickDisplay from '../TrickDisplay/TrickDisplay';
+import Form from '../Form/Form';
 
 const App = () => {
 
@@ -23,7 +24,8 @@ const App = () => {
   return (
     <div className="App">
       <h1>Sick Trick Wish List</h1>
-      < TrickDisplay tricks={tricks} />
+      <Form />
+      <TrickDisplay tricks={tricks} />
     </div>
   );
 }
