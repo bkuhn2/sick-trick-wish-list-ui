@@ -1,12 +1,32 @@
 import React, { useState } from "react";
 import './Form.css'
 
-const Form = () => {
+const Form = ({addTrick}) => {
 
 const [stance, setStance] = useState('');
 const [trickName, setTrickName] = useState('');
 const [obstacle, setObstacle] = useState('');
 const [link, setLink] = useState('');
+
+const sendIt = event => {
+  event.preventDefault();
+  const trick = {
+    stance: stance,
+    name: trickName,
+    obstacle: obstacle,
+    tutorial: link,
+    id: Date.now()
+  }
+  addTrick(trick);
+  resetState();
+}
+
+const resetState = () => {
+  setStance('');
+  setTrickName('');
+  setObstacle('');
+  setLink('');
+}
 
   return (
     <form>
@@ -25,7 +45,9 @@ const [link, setLink] = useState('');
         <option value='Pool'>Pool</option>
       </select>
       <input type="text" placeholder="Link" value={link} onChange={event => setLink(event.target.value)}/>
-      <button>SEND IT</button>
+      <button onClick={event => sendIt(event)}>
+        SEND IT
+      </button>
     </form>
   )
 }
