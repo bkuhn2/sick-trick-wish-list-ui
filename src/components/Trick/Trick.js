@@ -1,7 +1,7 @@
 import React from "react";
 import './Trick.css';
 
-const Trick = ({stance, name, obstacle, tutorial, id}) => {
+const Trick = ({stance, name, obstacle, tutorial}) => {
 
   return (
     <div className="trick">
